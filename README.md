@@ -1,4 +1,4 @@
-# Resellient-Industry-5.0--kG-Digital-Twins
+# Resellient-Industry-5.0--KG aware Cybersecurity Intelligence Modelling
 This repository contains the implementation of GRICS (Graph-Integrated Retrieval for Industry-Centric Security) — a Knowledge-Graph-Augmented Retrieval-Augmented Generation (KG-RAG) framework designed for explainable, human–AI collaborative threat reasoning in Industry 5.0 cyber-physical systems.
 
 GRICS
@@ -21,19 +21,13 @@ GRICS integrates structured cybersecurity knowledge (CVE, CWE, CAPEC, MITRE ATT&
 
 ## Core Contributions
 
-✅ Graph-aware RAG for cyber-physical environments
-
-✅ BRIDG-ICS ontology operationalization
-
-✅ Dual-LLM architecture (Symbolic Retrieval + Answer Synthesis)
-
-✅ Hybrid symbolic + embedding fallback retrieval
-
-✅ Multi-hop reasoning (up to 5 hops)
-
-✅ Quantitative explainability metrics
-
-✅ Adversarial robustness evaluation
+-  Graph-aware RAG for cyber-physical environments
+- BRIDG-ICS ontology operationalization
+- Dual-LLM architecture (Symbolic Retrieval + Answer Synthesis)
+- Hybrid symbolic + embedding fallback retrieval
+- Multi-hop reasoning (up to 5 hops)
+- Quantitative explainability metrics
+- Adversarial robustness evaluation
 
 ## System Architecture
 
@@ -41,95 +35,56 @@ GRICS follows a structured two-stage pipeline:
 
 # Symbolic Retrieval Stage
 
-Natural language query → Cypher generation
-
-Executed over Neo4j BRIDG-ICS knowledge graph
-
-Retrieves interpretable subgraphs
-
+- Natural language query → Cypher generation
+- Executed over Neo4j BRIDG-ICS knowledge graph
+- Retrieves interpretable subgraphs
 # Answer Generation Stage
 
-Retrieved graph evidence → LLM synthesis
-
-Produces grounded explanations
-
-Preserves reasoning chains (e.g., CVE → CWE → CAPEC → ATT&CK)
+- Retrieved graph evidence → LLM synthesis
+- Produces grounded explanations
+- Preserves reasoning chains (e.g., CVE → CWE → CAPEC → ATT&CK)
 
 # Embedding Fallback
 
 If symbolic execution returns empty results:
-
-Semantic similarity search identifies anchor nodes
-
-Refined Cypher query reattempted
+- Semantic similarity search identifies anchor nodes
+- Refined Cypher query reattempted
 
 ## Security Aware Knowledge Graph
 
 The BRIDG-ICS knowledge graph integrates:
 
-CVE
+- CVE, CWE, CAPEC, MITRE ATT&CK, Industrial assets (IT & OT)
 
-CWE
-
-CAPEC
-
-MITRE ATT&CK
-
-Industrial assets (IT & OT)
-
-Communication flows
-
-Risk attributes:
-
-pExploit
-
-riskWeight
-
-controlStrength
-
-costAttack
+- Communication flows,Risk attributes, pExploit, riskWeight, controlStrength, costAttack
 
 This enables:
 
-Vulnerability Propagation Risk (VPR) computation
-
-ATT&CK technique reachability
-
-Cross-layer attack path reasoning
+- Vulnerability Propagation Risk (VPR) computation
+- ATT&CK technique reachability
+- Cross-layer attack path reasoning
 
 ## Evaluation Summary
 
 GRICS is evaluated on:
 
-CTI-RCM (2021, 2024)
+- CTI-RCM (2021, 2024)
+- CTI-ATE benchmark
+- Multi-hop reasoning (1–5 hops)
+- Explainability metrics:
+- Hallucination Rate (HR)
+- Query Violation Rate (QVR)
+- Schema Consistency Rate (SCR)
+- Adversarial robustness:
+- Attack Success Rate (ASR)
+- Tokens per Query (TPQ)
 
-CTI-ATE benchmark
+  # Results demonstrate:
 
-Multi-hop reasoning (1–5 hops)
-
-Explainability metrics:
-
-Hallucination Rate (HR)
-
-Query Violation Rate (QVR)
-
-Schema Consistency Rate (SCR)
-
-Adversarial robustness:
-
-Attack Success Rate (ASR)
-
-Tokens per Query (TPQ)
-
-Results demonstrate:
-
-Improved multi-hop stability
-
-Reduced hallucination under increasing relational depth
-
-Strong grounding in symbolic retrieval
-
-Higher interpretability compared to baseline LLMs
+- Improved multi-hop stability
+-  Reduced hallucination under increasing relational depth
+- Strong grounding in symbolic retrieval
+- Higher interpretability compared to baseline LLMs
 
 ## Threat-Modelling Metrics
 Vulnerability Propagation Risk (VPR)
@@ -206,29 +161,19 @@ Human-Centric Design
 
 ## GRICS supports:
 
-Inspectable reasoning chains
-
-Transparent symbolic retrieval
-
-Analyst validation of intermediate steps
-
-Evidence-grounded mitigation derivation
-
-Designed to align with Industry 5.0 human-in-the-loop principles.
-
-Research Extensions
+- Inspectable reasoning chains
+- Transparent symbolic retrieval
+- Analyst validation of intermediate steps
+- Evidence-grounded mitigation derivation
+- Designed to align with Industry 5.0 human-in-the-loop principles.
+- Research Extensions
 
 Planned improvements:
-
-Confidence-aware traversal
-
-Hierarchical reasoning strategies
-
-Structural adversarial robustness testing
-
-Real-time embedding updates
-
-Digital Twin integration
+- Confidence-aware traversal
+-  Hierarchical reasoning strategies
+- Structural adversarial robustness testing
+- Real-time embedding updates
+- Digital Twin integration
 
 ## Citation
 
