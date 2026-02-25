@@ -131,56 +131,7 @@ Strong grounding in symbolic retrieval
 
 Higher interpretability compared to baseline LLMs
 
-## Repository Structure
-GRICS/
-│
-├── kg/
-│   ├── bridg_ics_schema.cypher
-│   ├── graph_population.py
-│   └── embeddings/
-│
-├── retrieval/
-│   ├── cypher_llm/
-│   ├── hybrid_retrieval.py
-│   └── fallback_logic.py
-│
-├── finetuning/
-│   ├── dataset/
-│   ├── training_config.yaml
-│   └── lora_training.py
-│
-├── evaluation/
-│   ├── cti_benchmark/
-│   ├── adversarial_testing/
-│   └── explainability_metrics.py
-│
-├── use_cases/
-│   ├── attack_path_reasoning.py
-│   ├── vulnerability_analysis.py
-│   ├── mitigation_derivation.py
-│   └── technique_attribution.py
-│
-└── README.md
-⚙️ Installation
-1️⃣ Clone Repository
-git clone https://github.com/your-org/GRICS.git
-cd GRICS
-2️⃣ Install Dependencies
-pip install -r requirements.txt
-3️⃣ Neo4j Setup
-
-Install Neo4j (v5+ recommended)
-
-Import BRIDG-ICS schema
-
-Populate graph database
-
-🚀 Running the System
-Run Hybrid Retrieval
-python retrieval/hybrid_retrieval.py --query "Find mitigations for CVE-2025-9492"
-Run Attack Path Analysis
-python use_cases/attack_path_reasoning.py --source MQTT_BROKER_1 --target SAFETY_PLC_2
-📈 Threat-Modelling Metrics
+## Threat-Modelling Metrics
 Vulnerability Propagation Risk (VPR)
 𝑉
 𝑃
@@ -253,7 +204,7 @@ Propagation prioritization
 
 Human-Centric Design
 
-GRICS supports:
+## GRICS supports:
 
 Inspectable reasoning chains
 
@@ -279,7 +230,7 @@ Real-time embedding updates
 
 Digital Twin integration
 
-📜 Citation
+## Citation
 
 If you use this work, please cite:
 
