@@ -182,6 +182,6 @@ If you use this work, please cite:
 @article{GRICS2025,
   title={GRICS: A Knowledge-Graph-Augmented Framework for Explainable and Human–AI Collaborative Threat Reasoning in Industry 5.0 Systems},
   author={Nandiya, P. and Mohsin, A. and Sarker, I.H and Ibrahim, A. and Janicke, H.},
-  journal={IEEE Access},
+  journal={IEEE},
   year={2026}
 }
