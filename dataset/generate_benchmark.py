@@ -6,7 +6,7 @@ from pathlib import Path
 # -----------------------------
 # CONFIG
 # -----------------------------
-GRAPH_FILE = "..\Downloads\code_and_file_part1llm\graph_nodes_updated.json"        # your node JSON file
+GRAPH_FILE = "graph_nodes_updated.json"        # make all nodes from BRIDG-ICS into json files.
 OUTPUT_FILE = "benchmark_dataset.json"
 NUM_SAMPLES = 300                 # total number of benchmark questions
 

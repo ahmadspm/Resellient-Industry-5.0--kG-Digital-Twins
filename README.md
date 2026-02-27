@@ -7,6 +7,8 @@ Graph-Aware Retrieval-Augmented Framework for Explainable Threat Reasoning in In
 
 ## Overview
 
+![System Architecture](images/Phase2_upd.png)
+
 GRICS (Graph-Integrated Retrieval for Industry-Centric Security) is a Knowledge-Graph-Augmented Retrieval-Augmented Generation (KG-RAG) framework designed for:
 
 Explainable cyber threat reasoning

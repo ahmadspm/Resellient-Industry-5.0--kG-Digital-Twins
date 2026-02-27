@@ -6,7 +6,7 @@ from sklearn.metrics import accuracy_score, precision_score, recall_score, f1_sc
 # 1️⃣ Neo4j connection
 # ================================================================
 URI = "bolt://localhost:7687"
-AUTH = ("neo4j", "12345678")
+AUTH = ("", "") # adjust this part
 driver = GraphDatabase.driver(URI, auth=AUTH)
 
 # ================================================================
