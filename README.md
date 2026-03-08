@@ -1,5 +1,7 @@
 # Resellient-Industry-5.0--KG aware Cybersecurity Intelligence Modelling
-This repository contains the implementation of GRICS (Graph-Integrated Retrieval for Industry-Centric Security) — a Knowledge-Graph-Augmented Retrieval-Augmented Generation (KG-RAG) framework designed for explainable, human–AI collaborative threat reasoning in Industry 5.0 cyber-physical systems.
+This repository contains the implementation of GRICS (Graph-Integrated Retrieval for Industry-Centric Security): A Human–AI Collaborative
+Knowledge-Graph Framework for Threat
+Reasoning in Advanced Manufacturing Systems.
 
 GRICS
 Graph-Aware Retrieval-Augmented Framework for Explainable Threat Reasoning in Industry 5.0
@@ -182,8 +184,10 @@ Planned improvements:
 If you use this work, please cite:
 
 @article{GRICS2025,
-  title={GRICS: A Knowledge-Graph-Augmented Framework for Explainable and Human–AI Collaborative Threat Reasoning in Industry 5.0 Systems},
-  author={Nandiya, P. and Mohsin, A. and Sarker, I.H and Ibrahim, A. and Janicke, H.},
+  title={GRICS: GRICS: A Human–AI Collaborative
+Knowledge-Graph Framework for Threat
+Reasoning in Advanced Manufacturing Systems},
+  author={Nandiya, P. and Mohsin, A. and Sarker, I.H. and Janicke, H.},
   journal={IEEE},
   year={2026}
 }
