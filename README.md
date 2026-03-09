@@ -1,4 +1,4 @@
-# Resellient-Industry-5.0--KG aware Cybersecurity Intelligence Modelling
+# Resellient-Advanced Maufacturing KG aware Cybersecurity Intelligence Modelling
 This repository contains the implementation of GRICS (Graph-Integrated Retrieval for Industry-Centric Security): A Human–AI Collaborative
 Knowledge-Graph Framework for Threat
 Reasoning in Advanced Manufacturing Systems.
@@ -19,7 +19,7 @@ Multi-hop attack path analysis
 
 Human–AI collaborative cybersecurity decision support
 
-Industry 5.0 cyber-physical systems
+Industry 5.0/Advanced Manufacturing cyber-physical systems
 
 GRICS integrates structured cybersecurity knowledge (CVE, CWE, CAPEC, MITRE ATT&CK) with a dual-LLM architecture to enable interpretable, ontology-grounded reasoning across IT and OT environments.
 
