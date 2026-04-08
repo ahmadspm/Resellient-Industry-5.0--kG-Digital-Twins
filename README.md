@@ -1,193 +1,134 @@
-# Resellient-Advanced Maufacturing KG aware Cybersecurity Intelligence Modelling
-This repository contains the implementation of GRICS (Graph-Integrated Retrieval for Industry-Centric Security): A Human–AI Collaborative
-Knowledge-Graph Framework for Threat
-Reasoning in Advanced Manufacturing Systems.
+# GRICS: Graph-Integrated Cybersecurity Intelligence for Advanced Manufacturing
 
-GRICS
-Graph-Aware Retrieval-Augmented Framework for Explainable Threat Reasoning in Industry 5.0
+This repository contains **GRICS (Graph-Integrated Retrieval for Industry-Centric Security)** — a knowledge-graph-aware framework for explainable cyber threat reasoning in Industry 5.0 environments.
 
+---
 
 ## Overview
 
 ![System Architecture](images/Phase2_upd.png)
 
-GRICS (Graph-Integrated Retrieval for Industry-Centric Security) is a Knowledge-Graph-Augmented Retrieval-Augmented Generation (KG-RAG) framework designed for:
+[Download Model](https://drive.google.com/file/d/1b_6akH2ZQDOi6QzALJX4YFFYvqS5-FTB/view?usp=sharing)
 
-Explainable cyber threat reasoning
+GRICS is a **KG-RAG (Knowledge Graph + Retrieval-Augmented Generation)** framework designed for:
 
-Multi-hop attack path analysis
+- Explainable cyber threat reasoning  
+- Multi-hop attack path analysis  
+- Human–AI collaborative decision support  
+- Cyber-physical systems in advanced manufacturing  
 
-Human–AI collaborative cybersecurity decision support
+It integrates structured cybersecurity knowledge (**CVE, CWE, CAPEC, MITRE ATT&CK**) with a dual-LLM architecture to enable **interpretable, ontology-grounded reasoning across IT and OT environments**.
 
-Industry 5.0/Advanced Manufacturing cyber-physical systems
-
-GRICS integrates structured cybersecurity knowledge (CVE, CWE, CAPEC, MITRE ATT&CK) with a dual-LLM architecture to enable interpretable, ontology-grounded reasoning across IT and OT environments.
+---
 
 ## Core Contributions
 
--  Graph-aware RAG for cyber-physical environments
-- BRIDG-ICS ontology operationalization
-- Dual-LLM architecture (Symbolic Retrieval + Answer Synthesis)
-- Hybrid symbolic + embedding fallback retrieval
-- Multi-hop reasoning (up to 5 hops)
-- Quantitative explainability metrics
-- Adversarial robustness evaluation
+- Graph-aware RAG for cyber-physical systems  
+- BRIDG-ICS ontology integration  
+- Dual-LLM pipeline (retrieval + answer generation)  
+- Hybrid symbolic + embedding fallback retrieval  
+- Multi-hop reasoning (up to 5 hops)  
+- Explainability and robustness evaluation  
+
+---
 
 ## System Architecture
 
-GRICS follows a structured two-stage pipeline:
+### 1. Symbolic Retrieval
+- Natural language → Cypher query  
+- Executed on Neo4j knowledge graph  
+- Returns structured, interpretable subgraphs  
 
-# Symbolic Retrieval Stage
+### 2. Answer Generation
+- Graph evidence → LLM synthesis  
+- Produces grounded explanations  
+- Preserves reasoning chains  
+  *(e.g., CVE → CWE → CAPEC → ATT&CK)*  
 
-- Natural language query → Cypher generation
-- Executed over Neo4j BRIDG-ICS knowledge graph
-- Retrieves interpretable subgraphs
-# Answer Generation Stage
+### 3. Embedding Fallback
+- Triggered when symbolic retrieval fails  
+- Uses semantic similarity to identify anchor nodes  
+- Regenerates refined Cypher queries  
 
-- Retrieved graph evidence → LLM synthesis
-- Produces grounded explanations
-- Preserves reasoning chains (e.g., CVE → CWE → CAPEC → ATT&CK)
+---
 
-# Embedding Fallback
+## Knowledge Graph (BRIDG-ICS)
 
-If symbolic execution returns empty results:
-- Semantic similarity search identifies anchor nodes
-- Refined Cypher query reattempted
+The BRIDG-ICS graph integrates:
 
-## Security Aware Knowledge Graph
+- CVE, CWE, CAPEC, MITRE ATT&CK  
+- Industrial assets (IT / OT)  
+- Communication flows and risk attributes  
 
-The BRIDG-ICS knowledge graph integrates:
+**Risk attributes include:**
+- `pExploit`, `riskWeight`, `controlStrength`, `costAttack`
 
-- CVE, CWE, CAPEC, MITRE ATT&CK, Industrial assets (IT & OT)
+### Supports:
+- Vulnerability Propagation Risk (VPR)  
+- ATT&CK technique mapping  
+- Cross-layer attack path reasoning  
 
-- Communication flows,Risk attributes, pExploit, riskWeight, controlStrength, costAttack
+---
 
-This enables:
-
-- Vulnerability Propagation Risk (VPR) computation
-- ATT&CK technique reachability
-- Cross-layer attack path reasoning
-
-## Evaluation Summary
+## Evaluation
 
 GRICS is evaluated on:
 
-- CTI-RCM (2021, 2024)
-- CTI-ATE benchmark
-- Multi-hop reasoning (1–5 hops)
-- Explainability metrics:
-- Hallucination Rate (HR)
-- Query Violation Rate (QVR)
-- Schema Consistency Rate (SCR)
-- Adversarial robustness:
-- Attack Success Rate (ASR)
-- Tokens per Query (TPQ)
+- **CTI-RCM (2021, 2024)**  
+- **CTI-ATE benchmark**  
+- Multi-hop reasoning (1–5 hops)  
 
-  # Results demonstrate:
+### Metrics
 
-- Improved multi-hop stability
--  Reduced hallucination under increasing relational depth
-- Strong grounding in symbolic retrieval
-- Higher interpretability compared to baseline LLMs
+- **Explainability**
+  - Hallucination Rate (HR)  
+  - Query Violation Rate (QVR)  
+  - Schema Consistency Rate (SCR)  
 
-## Threat-Modelling Metrics
-Vulnerability Propagation Risk (VPR)
-𝑉
-𝑃
-𝑅
-=
-∑
-𝑝
-𝐸
-𝑥
-𝑝
-𝑙
-𝑜
-𝑖
-𝑡
-𝑖
-⋅
-𝑟
-𝑖
-𝑠
-𝑘
-𝑊
-𝑒
-𝑖
-𝑔
-ℎ
-𝑡
-𝑖
-⋅
-(
-1
-−
-𝑐
-𝑜
-𝑛
-𝑡
-𝑟
-𝑜
-𝑙
-𝑆
-𝑡
-𝑟
-𝑒
-𝑛
-𝑔
-𝑡
-ℎ
-𝑖
-)
-VPR=∑pExploit
-i
-	​
+- **Robustness**
+  - Attack Success Rate (ASR)  
+  - Tokens per Query (TPQ)  
 
-⋅riskWeight
-i
-	​
+### Key Results
 
-⋅(1−controlStrength
-i
-	​
+- Improved multi-hop reasoning stability  
+- Reduced hallucination with increasing complexity  
+- Strong symbolic grounding  
+- Higher interpretability than baseline LLMs  
 
-)
+---
 
-Used for:
+## Human-Centric Design
 
-Zone-level risk aggregation
+GRICS is designed for **transparent and auditable AI-assisted analysis**:
 
-OT/DMZ/IT risk comparison
+- Inspectable reasoning chains  
+- Visible Cypher queries  
+- Verifiable intermediate steps  
+- Evidence-grounded mitigation insights  
 
-Propagation prioritization
+Supports **human-in-the-loop cybersecurity workflows** aligned with Industry 5.0.
 
-Human-Centric Design
+---
 
-## GRICS supports:
+## Future Work
 
-- Inspectable reasoning chains
-- Transparent symbolic retrieval
-- Analyst validation of intermediate steps
-- Evidence-grounded mitigation derivation
-- Designed to align with Industry 5.0 human-in-the-loop principles.
-- Research Extensions
+- Adaptive and confidence-aware retrieval  
+- Hierarchical reasoning strategies  
+- Structural adversarial robustness evaluation  
+- Real-time embedding updates  
+- Integration with **digital twin systems** for dynamic risk analysis  
 
-Planned improvements:
-- Confidence-aware traversal
--  Hierarchical reasoning strategies
-- Structural adversarial robustness testing
-- Real-time embedding updates
-- Digital Twin integration
+---
 
 ## Citation
 
 If you use this work, please cite:
 
+```bibtex
 @article{GRICS2025,
-  title={GRICS: GRICS: A Human–AI Collaborative
-Knowledge-Graph Framework for Threat
-Reasoning in Advanced Manufacturing Systems},
-  author={Nandiya, P. and Mohsin, A. and Sarker, I.H. and Janicke, H.},
+  title={GRICS: A Human–AI Collaborative Knowledge-Graph Framework for Threat Reasoning in Advanced Manufacturing Systems},
+  author={Nandiya, P. and Mohsin, A. and Sarker, I.H. and Ibrahim, A. and Janicke, H.},
   journal={IEEE},
   year={2026}
 }

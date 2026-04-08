@@ -58,14 +58,14 @@ Unlike `get_result_neo4j`, it focuses on returning the overall execution results
 
 ### `get_similar_embedding`
 
-This file demonstrates how to retrieve semantically similar embeddings from a CSV file.
+This module retrieves semantically similar nodes from a CSV-based embedding store.
 
-It is used when a generated query fails, enabling the system to identify related nodes in the knowledge graph through semantic similarity.
+It is used as part of the fallback mechanism when Cypher query generation or execution fails. In such cases, semantic similarity is computed to identify relevant nodes in the knowledge graph, which are then used to refine query generation.
 
-Before running this file, you need to embed the BRIDG-ICS node CSV file. In this project, the `MiniLM-L6-v2` model is used to generate the embeddings. The model can be downloaded from:
+Before using this module, the BRIDG-ICS node dataset must be embedded. In this project, embeddings are generated using the **MiniLM-L6-v2** model.
 
-*(insert download link here)*
-
+[model_embedding](
+https://drive.google.com/file/d/1Hp-KaMRLvAX8nXi3NtGkOWe3SZZjup98/view?usp=sharing)
 
 ---
 
